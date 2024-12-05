@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="waffle">
+        <h2>
+            <center>🧇CONTACT US🧇</center>
+        </h2>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/hours.html">Store Hours</a></li>
+                    <li><a href="/grid.html">Yumminess!!</a></li>
+                    <li><a href="/flexx.html">Flavours</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Waffle Order Form</h1>
+        <form id="orderForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" required>
+
+            <label for="flavour">Waffle Flavour:</label>
+            <select id="flavour" required>
+                <option value="">Select a flavour</option>
+                <option value="vanilla">Vanilla</option>
+                <option value="chocolate">Chocolate</option>
+                <!-- Add 10 more flavours -->
+                <option value="strawberry">Strawberry</option>
+                <option value="blueberry">Blueberry</option>
+                <option value="caramel">Caramel</option>
+                <option value="maple">Maple</option>
+                <option value="banana">Banana</option>
+                <option value="raspberry">Raspberry</option>
+                <option value="coconut">Coconut</option>
+                <option value="mango">Mango</option>
+                <option value="peanut-butter">Peanut Butter</option>
+                <option value="cinnamon">Cinnamon</option>
+            </select>
+
+            <label for="size">Size:</label>
+            <input type="radio" name="size" value="small" id="sizeSmall" required>
+            <label for="sizeSmall">Small</label>
+            <input type="radio" name="size" value="medium" id="sizeMedium">
+            <label for="sizeMedium">Medium</label>
+            <input type="radio" name="size" value="large" id="sizeLarge">
+            <label for="sizeLarge">Large</label>
+
+            <label for="toppings">Toppings:</label>
+            <select id="toppings" multiple required>
+                <option value="chocolate-chips">Chocolate Chips</option>
+                <option value="strawberries">Strawberries</option>
+                <option value="blueberries">Blueberries</option>
+                <option value="whipped-cream">Whipped Cream</option>
+                <option value="caramel-sauce">Caramel Sauce</option>
+                <option value="nuts">Nuts</option>
+                <option value="sprinkles">Sprinkles</option>
+            </select>
+
+            <label for="payment">Mode of Payment:</label>
+            <input type="radio" name="payment" value="cash" id="paymentCash" required>
+            <label for="paymentCash">Cash on delivery</label>
+            <input type="radio" name="payment" value="card" id="paymentCard">
+            <label for="paymentCard">Card</label>
+
+            <!-- Card details section -->
+            <div id="cardDetailsSection" style="display: none;">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" placeholder="Enter card number">
+
+                <label for="cardExpiry">Expiry Date:</label>
+                <input type="text" id="cardExpiry" placeholder="MM/YY">
+
+                <label for="cardCVC">CVC:</label>
+                <input type="text" id="cardCVC" placeholder="Enter CVC">
+            </div>
+
+            <button type="submit">Place Order</button>
+        </form>
+
+        <!-- Order summary container -->
+        <div id="orderSummaryContainer"></div>
+    </div>
+
+    <script src="cc.js"></script>
+</body>
